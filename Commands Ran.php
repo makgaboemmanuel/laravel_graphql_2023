@@ -43,3 +43,7 @@ git push -u origin main */
 }
 
 */
+
+#   php artisan lighthouse:query Users
+
+#
