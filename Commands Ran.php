@@ -46,4 +46,101 @@ git push -u origin main */
 
 #   php artisan lighthouse:query Users
 
-#
+# command ran below:
+
+/*
+    {
+        user(id: 9) {
+
+            name
+            email
+        }
+    }
+*/
+
+/* response from Server:
+
+{
+  "data": {
+    "user": {
+      "name": "Raul Gleason",
+      "email": "qjast@example.org"
+    }
+  }
+}
+
+*/
+
+
+/* run query below:
+
+{
+  UserOne: user(id: 9) {
+    name
+    email
+  }
+
+    UserTwo: user(id: 1) {
+    name
+    email
+  }
+}
+
+
+*/
+
+/* query ran:
+
+    {
+    users (first: 1, page: 1) {
+        data{
+        name
+        email
+        }
+        paginatorInfo {
+        currentPage
+        lastPage
+        hasMorePages
+        lastItem
+        total
+        }
+    }
+    }
+
+
+*/
+
+/* query ran
+
+mutation {
+  createUser (name: "Makgabo", email: "gudlukmme@gmail.com", password: "password") {
+    id
+    name
+  }
+}
+
+*/
+
+/*   query ran:
+
+mutation {
+  updateUser (name: "Emmanuel", email: "gudlukmme@gmail.com", id: 16) {
+    id
+    name
+  }
+}
+
+*/
+
+/* query ran:
+
+mutation {
+  deleteUser (id: 6) {
+    id
+    name
+  }
+}
+
+*/
+
+
